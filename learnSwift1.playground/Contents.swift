@@ -1,35 +1,45 @@
-//: Playground - noun: a place where people can play
 
 import UIKit
 
 //: VARIABLES
 var str = "Hello, playground"
 
+//: types are declared automatically or you can specify them
 var num = 5
 
 var  i = true;
 
-var arr = [Int]()
-
 
 //: ARRAYS (collections)
+
+//: declare an array and then appen elements
+var arr = [Int]()
+
 arr.append(5);
 arr += [4, 6]
 arr += [7]
 
 var arr2 = [String]()
-//:or 
-var arr3: [String] = ["dffdfdf", "qqqQQ"]
+
+
 arr2.append("fgfg")
 arr2 += ["luki", "marci"]
+
+//:or append them immediately
+var arr3: [String] = ["dffdfdf", "qqqQQ"]
+
+//: return length of an array
 
 arr2.count
 arr.count
 arr3.count
 
+//:get value by index
 arr2[2]
 
-//: Collection sets
+
+
+//: COLLECTION SETS
 
 var letters = Set<String>()
 
@@ -38,7 +48,7 @@ letters.insert("a")
 //: Set deletes identical values
 var favourites: Set = ["pizza", "apple", "spaghetti", "pizza", "Pizza"]
 
-//: Collections dictionaries  Dictionary<Key, Value>
+//: Collections dictionaries,  Dictionary<Key, Value>
 
 var namesOfInts: Dictionary<Int, String> = [Int: String]()
 
@@ -50,10 +60,10 @@ var multiple: Dictionary<Int, [String]> = [Int: [String]]()
 
 multiple[1] = ["hej", "papa"]
 
-multiple[1]?[1] //: Accessing element
+multiple[1]?[1] //: Accessing element with question mark sign
 
 
-//: Logic
+//: LOGIC if and switch
 
 var numbr = 33
 var num2 = 5
@@ -80,7 +90,7 @@ case 35:
     print("default")
 }
 
-//: LOOPS
+//: LOOPS for, while + repeat
 
 for var i in 0..<10 {
     i
@@ -89,6 +99,7 @@ for var i in 0..<10 {
 
 var numbers: [Int] = [1,2 , 5 ,6, 8]
 
+//: no need to specify array length
 for var n in numbers {
     print(n)
 }
@@ -102,6 +113,7 @@ while count < 10 {
 
 var count2: Int = 0
 
+//: logic similar to Do{ } While
 repeat {
     print("not yet")
     count2 += 1
@@ -110,5 +122,29 @@ repeat {
 
 
 //: FUNCTIONS
+
+//:function with parameters
+func CheckCount(message: String, endCount: Int) -> String { //: declare what you want to return
+    
+    var count: Int = 0
+    
+    repeat {
+        print(message) //: use given message parameter
+        
+        count += 1 //: in swift 4 you can use this synthax the "i++" has been removed
+        
+    } while count < endCount //: use second parameter which stops loop
+    
+    return "Completed"
+    
+}
+
+//: calling the function with the parameters
+CheckCount(message: "hello", endCount: 2)
+
+//: you can assign result of function to variable which can be used later
+var result = CheckCount(message: "goodbye", endCount: 5)
+
+
 
 
