@@ -69,7 +69,7 @@ var numbr = 33
 var num2 = 5
 
 if (numbr == 38) {
-    print(num)
+    print(numbr)
 }
 else if (num2 == 3) {
     print("wow")
@@ -93,7 +93,7 @@ case 35:
 //: LOOPS for, while + repeat
 
 for var i in 0..<10 {
-    i
+    print(i)
 }
 
 
@@ -144,6 +144,16 @@ CheckCount(message: "hello", endCount: 2)
 
 //: you can assign result of function to variable which can be used later
 var result = CheckCount(message: "goodbye", endCount: 5)
+
+
+//:OPTIONALS
+
+//: type before question mark is declared and the one after  is optional
+var string: String? = "good"
+
+if let stringVal = string {
+    print(stringVal)
+}
 
 
 
