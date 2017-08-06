@@ -181,3 +181,18 @@ var ferrari = FastCar(topSpeed: 300)
 ferrari.GetMiddleSpeed()
 
 
+//: INHERITANCE, dziedziczenie
+
+class Car {
+    
+    let numWheels = 4
+}
+
+class FamilyCar: Car {
+    let numDoors = 5
+}
+
+var myCar = FamilyCar()
+myCar.numDoors
+myCar.numWheels
+
