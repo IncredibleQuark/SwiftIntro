@@ -156,5 +156,28 @@ if let stringVal = string {
 }
 
 
+//: CLASSSES AND OBJECTS
+
+//: declare a class
+class FastCar {
+    
+    var topSpeed : Int
+    
+    init(topSpeed: Int) {
+        self.topSpeed = topSpeed
+    }
+    
+    func GetMiddleSpeed () -> Int {
+    
+        return topSpeed / 2
+    
+    }
+}
+
+var bugatti = FastCar(topSpeed: 210) //: create object form class
+bugatti.GetMiddleSpeed() //: call funciton on this object
+
+var ferrari = FastCar(topSpeed: 300)
+ferrari.GetMiddleSpeed()
 
 
