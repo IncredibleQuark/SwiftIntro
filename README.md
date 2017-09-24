@@ -1,2 +1,2 @@
 # SwiftIntro
-Introduction to swift 4 due to Youtube with my comments
+Introduction to swift 4 with Youtube and Udemy course.
