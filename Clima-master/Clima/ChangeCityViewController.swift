@@ -10,13 +10,15 @@ import UIKit
 
 
 //Write the protocol declaration here:
-
+protocol ChangeCityDelegate {
+    func userEnteredANewCityName (city : String)
+}
 
 
 class ChangeCityViewController: UIViewController {
     
     //Declare the delegate variable here:
-
+    var delegate : ChangeCityDelegate?
     
     //This is the pre-linked IBOutlets to the text field:
     @IBOutlet weak var changeCityTextField: UITextField!
